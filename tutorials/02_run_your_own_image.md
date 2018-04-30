@@ -1,4 +1,4 @@
-# 0x Running your own Docker image
+# 02 - Running your own Docker image
 
 Minikube (and kubernetes) automatically uses dockerHub to pull docker images for deployments. Of course, you can always build and deploy a local/custom built image. This step details how.
 
