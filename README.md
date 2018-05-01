@@ -9,7 +9,7 @@ This tutorial assumes that the following tools are installed on the system:
 - a [virtualization driver](https://github.com/kubernetes/minikube/blob/master/docs/drivers.md) for minikube (details in the minikube page).
 - [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/), for managing the cluster, can be installed via homebrew.
 - [docker](https://www.docker.com/), for creating a containerized application.
-- [node.js](https://nodejs.org/en/), version 8+, for running the sample application.
+- [node.js](https://nodejs.org/en/), version 8+, for running the sample application, but feel free to use your own app/image.
 
 Any application that can be dockerized can be used for this tutorial, as long as the docker image is available.
 
