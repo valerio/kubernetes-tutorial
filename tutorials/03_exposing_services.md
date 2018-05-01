@@ -91,4 +91,4 @@ Then you can just navigate to `IP:PORT` (192.168.64.4:32555 based on the example
 
 ## Next up
 
-The next steps will cover exposing services via Ingresses and fancying up our deployments, adding rolling deployments, configMaps and secrets, so they become (almost) production ready.
+The next step will cover [exposing services via Ingresses](./04_make_an_ingress.md).
