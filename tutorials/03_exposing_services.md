@@ -1,4 +1,4 @@
-# 03 Exposing Services
+# 03 - Exposing Services
 
 Running a pod via a deployment doesn't make it reachable from the outside world. This is fine for worker services that don't need to be reachable (message bus processors, cron jobs, etc.), but for servers it's necessary to specify and add a Service.
 
