@@ -10,7 +10,7 @@ Make sure that Docker is installed on your system.
 Minikube uses its own docker engine to pull images, which means that images built locally won't be available to it.
 You can make your local docker build for minikube's engine by running the following in a terminal:
 
-```
+```bash
     eval $(minikube docker-env)
 ```
 
@@ -34,7 +34,7 @@ The default option for deploying via kubectl will try to always pull the image f
 
 Fill in the fields surrounded by {} and save the following snippet as a yaml file: 
 
-```
+```yaml
 kind: Deployment
 apiVersion: extensions/v1beta1
 metadata:

@@ -6,7 +6,7 @@ Running a pod via a deployment doesn't make it reachable from the outside world.
 
 The simplest Service to add is a clusterIP Service, this can be done via the following yaml snippet:
 
-```
+```yaml
 kind: Service
 apiVersion: v1
 metadata:
@@ -16,7 +16,7 @@ metadata:
   name: {service-name}
 spec:
   selector:
-    app: {name of your deployment's app tag}
+    app: {app tag of your deployment}
   ports:
     - protocol: TCP
       port: 80
@@ -51,7 +51,7 @@ There are two ways of exposing services to the outside world: `NodePort` and `Lo
 
 We can deploy a NodePort service by changing its `spec.type` to `NodePort`, like in the following yaml descriptor:
 
-```
+```yaml
 kind: Service
 apiVersion: v1
 metadata:
@@ -62,7 +62,7 @@ spec:
   # this will make the service a NodePort service
   type: NodePort
   selector:
-    app: {name of your deployment's app tag}
+    app: {app tag of your deployment}
   ports:
     - protocol: TCP
       # new -> this will be the port used to reach it from outside
