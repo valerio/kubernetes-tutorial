@@ -43,3 +43,5 @@ You can also open the Kubernetes dashboard by running `minikube dashboard`, whic
 
 The Kubernetes dashboard gives information about the cluster at a quick glance, it also allows to run many of the actions that 
 can be run via `kubectl`.
+
+When the cluster is ready, head over to the first step: [deploying your first container](./tutorials/01_your_first_pod.md).
