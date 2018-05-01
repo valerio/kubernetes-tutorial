@@ -72,4 +72,4 @@ Finally, the deployment can be permanently deleted by using `kubectl delete -f <
 
 ## Next step
 
-Creating a new deployment and pods is pretty easy, but these are actually only visible to containers inside of the cluster. The next step will be exposing your containers by using Services.
+Creating a new deployment and pods is pretty easy, but these are actually only visible to containers inside of the cluster. The next step will be [exposing your containers by using Services](./03_exposing_services.md).

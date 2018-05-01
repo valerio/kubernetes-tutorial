@@ -52,4 +52,4 @@ deployment.extensions "nginx-pod" deleted
 
 ## Next step
 
-Creating a new deployment and pods is pretty easy, but these are actually only visible to containers inside of the cluster. The next step will be exposing your containers by using Services.
+You know how to run images published via dockerhub on kubernetes, now it's time to [build your own image](./02_run_your_own_image.md) and deploy it with a more declarative approach (i.e. use a *Deployment*).
