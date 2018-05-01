@@ -49,3 +49,6 @@ Once deployed, head over to your minikube IP, and you should see your applicatio
 
 **Note**: the guide skips setting a certificate for the controller, which means you'll likely get a security warning from your browser.
 
+## Next step
+
+In the next step, we'll [spruce up our deployment](./05_update_and_scale_up.md) by adding a few key kubernetes features to it.
