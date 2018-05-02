@@ -106,3 +106,36 @@ This prevents deploying broken images, as the old version of the Pod will be kep
 The `livenessProbe` works similarly: it will poll the endpoint every 10 seconds. If there are 3 consecutive failures, the Pod will be considered "unhealthy" and will be restarted automatically.
 
 Try adding these without a health check endpoint and see what happens! Is your app still reachable?
+
+## Managing resources assigned to Pods
+
+It's possible to specify the amount of resources assigned to each Pod run on the cluster via the Deployment spec. Resources are specified as *CPU cores* and *Memory*, for each of those, a **request** and **limit** amount can be specified.
+
+CPUs are measured in Cores (0.5, 1, 2, etc.) or milliCores(500m, 1000m, 2000m, etc.). Memory can be specified in terms of bytes (as a plain integer number) or using the SI suffixes, also in power of two form (e.g. K, Ki, M, Mi, G, Gi, etc.).
+
+In terms of specification:
+- the `request` is the amount of CPU/Memory that is *guaranteed* to every Pod;
+- the `limit` is the maximum amount of CPU/Memory tha each Pod can use (Pods exceeding Memory limits will be restarted);
+
+For further details check the [official Kubernetes documentation](https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/) on the meaning and effect of resources.
+
+Adding resource requests and limits to a Deployment is as simple as including a new section under your yaml file `spec.containers`:
+
+```yaml
+spec:
+  containers:
+    - name: 
+      #...
+      resources:
+        limits:
+          cpu: "500m"
+          memory: "250Mi"
+        requests:
+          cpu: "250m"
+          memory: "200Mi"
+
+```
+
+The Deployment can then be updated via `kubectl apply -f filename.yaml`.
+
+In this example, we are setting a request of 0.25 CPU and ~200MB per Pod. Pods **can exceed** these values, up to their specified limits. A Pod above its memory request might be evicted if the system is strapped for memory, while a Pod that goes beyond its memory limit **will be immediately restarted**.
