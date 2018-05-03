@@ -4,6 +4,8 @@ A simple guide for running a local kubernetes cluster (using minikube), dockeriz
 
 ## Prerequisites
 
+It's recommended that you already have a grasp on some Kubernetes basics, you can check [this presentation](http://slides.com/valep27/kubernetes-basics) for a quick introduction.
+
 This tutorial assumes that the following tools are installed on the system:
 - [minikube](https://github.com/kubernetes/minikube), for running a local kubernetes (k8s) cluster.
 - a [virtualization driver](https://github.com/kubernetes/minikube/blob/master/docs/drivers.md) for minikube (details in the minikube page).
